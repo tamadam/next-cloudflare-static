@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Button from "./Button";
 
 interface Product {
   id: number;
@@ -8,8 +9,6 @@ interface Product {
 interface ProductsResponse {
   products: Product[];
 }
-
-export const runtime = "edge";
 
 export default async function About() {
   const res = await fetch("https://dummyjson.com/products");
@@ -28,6 +27,7 @@ export default async function About() {
           <li key={product.id}>{product.title}</li>
         ))}
       </ul>
+      <Button />
     </>
   );
 }
