@@ -17,7 +17,7 @@ export default async function About() {
 
   return (
     <>
-      <h1>This page will use the edge runtime to fetch data.</h1>
+      <h1>Environment variable test. {process.env.NEXT_PUBLIC_TEST_VAR}</h1>
       <div>
         Back to <Link href="/">Home</Link>
       </div>
