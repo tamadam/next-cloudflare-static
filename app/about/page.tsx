@@ -9,7 +9,7 @@ interface ProductsResponse {
   products: Product[];
 }
 
-/* export const runtime = "edge"; */
+export const runtime = "edge";
 
 export default async function About() {
   const res = await fetch("https://dummyjson.com/products");
