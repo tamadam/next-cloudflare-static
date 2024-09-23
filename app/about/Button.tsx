@@ -7,8 +7,9 @@ const Button = () => {
 
   const handleClick = async () => {
     setPrimary((prev) => !prev);
-
-    const result = await fetch("/api/products", {
+    console.log("api routes are not supported when using static export");
+    // api routes are not supported when using static export
+    /*     const result = await fetch("/api/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,7 +17,7 @@ const Button = () => {
       body: JSON.stringify({ id: 1, name: "LabView" }),
     });
 
-    console.log(await result.json());
+    console.log(await result.json()); */
   };
 
   return (
